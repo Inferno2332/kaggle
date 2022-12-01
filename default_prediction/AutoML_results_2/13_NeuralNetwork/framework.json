@@ -1,0 +1,499 @@
+{
+    "uid": "bfb921bd-57b1-4649-be10-b81b68661ea4",
+    "name": "13_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Batch Enrolled": {
+                            "BAT1104812": 0,
+                            "BAT1135695": 1,
+                            "BAT1184694": 2,
+                            "BAT1467036": 3,
+                            "BAT1586599": 4,
+                            "BAT1761981": 5,
+                            "BAT1766061": 6,
+                            "BAT1780517": 7,
+                            "BAT1930365": 8,
+                            "BAT2003848": 9,
+                            "BAT2078974": 10,
+                            "BAT2136391": 11,
+                            "BAT224923": 12,
+                            "BAT2252229": 13,
+                            "BAT2333412": 14,
+                            "BAT2428731": 15,
+                            "BAT2522922": 16,
+                            "BAT2558388": 17,
+                            "BAT2575549": 18,
+                            "BAT2803411": 19,
+                            "BAT2833642": 20,
+                            "BAT3193689": 21,
+                            "BAT3461431": 22,
+                            "BAT3726927": 23,
+                            "BAT3865626": 24,
+                            "BAT3873588": 25,
+                            "BAT4136152": 26,
+                            "BAT4271519": 27,
+                            "BAT4351734": 28,
+                            "BAT4694572": 29,
+                            "BAT4722912": 30,
+                            "BAT4808022": 31,
+                            "BAT5341619": 32,
+                            "BAT5489674": 33,
+                            "BAT5525466": 34,
+                            "BAT5547201": 35,
+                            "BAT5629144": 36,
+                            "BAT5714674": 37,
+                            "BAT5811547": 38,
+                            "BAT5849876": 39,
+                            "BAT5924421": 40
+                        },
+                        "Grade": {
+                            "A": 0,
+                            "B": 1,
+                            "C": 2,
+                            "D": 3,
+                            "E": 4,
+                            "F": 5,
+                            "G": 6
+                        },
+                        "Sub Grade": {
+                            "A1": 0,
+                            "A2": 1,
+                            "A3": 2,
+                            "A4": 3,
+                            "A5": 4,
+                            "B1": 5,
+                            "B2": 6,
+                            "B3": 7,
+                            "B4": 8,
+                            "B5": 9,
+                            "C1": 10,
+                            "C2": 11,
+                            "C3": 12,
+                            "C4": 13,
+                            "C5": 14,
+                            "D1": 15,
+                            "D2": 16,
+                            "D3": 17,
+                            "D4": 18,
+                            "D5": 19,
+                            "E1": 20,
+                            "E2": 21,
+                            "E3": 22,
+                            "E4": 23,
+                            "E5": 24,
+                            "F1": 25,
+                            "F2": 26,
+                            "F3": 27,
+                            "F4": 28,
+                            "F5": 29,
+                            "G1": 30,
+                            "G2": 31,
+                            "G3": 32,
+                            "G4": 33,
+                            "G5": 34
+                        },
+                        "Employment Duration": {
+                            "MORTGAGE": 0,
+                            "OWN": 1,
+                            "RENT": 2
+                        },
+                        "Verification Status": {
+                            "Not Verified": 0,
+                            "Source Verified": 1,
+                            "Verified": 2
+                        },
+                        "Initial List Status": {
+                            "f": 0,
+                            "w": 1
+                        },
+                        "Application Type": {
+                            "INDIVIDUAL": 0,
+                            "JOINT": 1
+                        }
+                    },
+                    "columns": [
+                        "Batch Enrolled",
+                        "Grade",
+                        "Sub Grade",
+                        "Employment Duration",
+                        "Verification Status",
+                        "Initial List Status",
+                        "Application Type"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        8359.466832435,
+                        8148.460462551758,
+                        6778.635565593752,
+                        3.336466089191735,
+                        11.33650039276742,
+                        3.711628287809356,
+                        1.385772863396388,
+                        7.39433036053488,
+                        0.9304270972067107,
+                        45023.42690748784,
+                        0.7123874902017793,
+                        8.434599151960777,
+                        6.2384235113116695,
+                        7844.747128541163,
+                        22.57210830007234,
+                        8.307355984186358,
+                        0.49860050492276153,
+                        2209.7001566997055,
+                        5.263369279608346,
+                        353.1583208264487,
+                        3.53647508073147,
+                        0.041192432767387425,
+                        43.33643958298934,
+                        720.9078799546289,
+                        139378.10745606647,
+                        20898.30093572265
+                    ],
+                    "mean": [
+                        16840.533806352156,
+                        15785.129414787438,
+                        14607.564569919383,
+                        58.17038559598395,
+                        18.901515900152184,
+                        11.840520865649921,
+                        1.8202264956420342,
+                        11.94147874379904,
+                        0.8208194161709192,
+                        80471.85501270904,
+                        1.0248433701602861,
+                        23.288754425363994,
+                        14.271280905982568,
+                        7718.710951242168,
+                        52.86895744145498,
+                        18.624384844951283,
+                        0.5373836393462063,
+                        2060.693690135935,
+                        1.1459486092395201,
+                        58.718104660751685,
+                        1.131394340056189,
+                        0.0016997055161373203,
+                        71.15993043065795,
+                        143.1782516750005,
+                        159579.20793722948,
+                        23126.805166314207
+                    ],
+                    "var": [
+                        69880685.72258087,
+                        66397407.9097692,
+                        45949900.13113253,
+                        11.13200596432639,
+                        128.51624115521585,
+                        13.776184546866611,
+                        1.9203664289258242,
+                        54.67612148072789,
+                        0.8656945832165058,
+                        2027108970.4939003,
+                        0.5074959361959902,
+                        71.14246285425745,
+                        38.91792790648622,
+                        61540057.510754816,
+                        509.5000731101946,
+                        69.0121634479969,
+                        0.24860246350923276,
+                        4882774.7825187035,
+                        27.703056173524878,
+                        124720.79956895688,
+                        12.506655996634658,
+                        0.001696816517295733,
+                        1878.0469957300854,
+                        519708.1713806776,
+                        19426256838.03481,
+                        436738982.0000262
+                    ],
+                    "n_samples_seen": 50597,
+                    "n_features_in": 26,
+                    "columns": [
+                        "Loan Amount",
+                        "Funded Amount",
+                        "Funded Amount Investor",
+                        "Term",
+                        "Batch Enrolled",
+                        "Interest Rate",
+                        "Grade",
+                        "Sub Grade",
+                        "Employment Duration",
+                        "Home Ownership",
+                        "Verification Status",
+                        "Debit to Income",
+                        "Open Account",
+                        "Revolving Balance",
+                        "Revolving Utilities",
+                        "Total Accounts",
+                        "Initial List Status",
+                        "Total Received Interest",
+                        "Total Received Late Fee",
+                        "Recoveries",
+                        "Collection Recovery Fee",
+                        "Application Type",
+                        "Last week Pay",
+                        "Total Collection Amount",
+                        "Total Current Balance",
+                        "Total Revolving Credit Limit"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Loan Amount": [
+                        "scale_normal"
+                    ],
+                    "Funded Amount": [
+                        "scale_normal"
+                    ],
+                    "Funded Amount Investor": [
+                        "scale_normal"
+                    ],
+                    "Term": [
+                        "scale_normal"
+                    ],
+                    "Batch Enrolled": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Interest Rate": [
+                        "scale_normal"
+                    ],
+                    "Grade": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Sub Grade": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Employment Duration": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Home Ownership": [
+                        "scale_normal"
+                    ],
+                    "Verification Status": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Debit to Income": [
+                        "scale_normal"
+                    ],
+                    "Open Account": [
+                        "scale_normal"
+                    ],
+                    "Revolving Balance": [
+                        "scale_normal"
+                    ],
+                    "Revolving Utilities": [
+                        "scale_normal"
+                    ],
+                    "Total Accounts": [
+                        "scale_normal"
+                    ],
+                    "Initial List Status": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Total Received Interest": [
+                        "scale_normal"
+                    ],
+                    "Total Received Late Fee": [
+                        "scale_normal"
+                    ],
+                    "Recoveries": [
+                        "scale_normal"
+                    ],
+                    "Collection Recovery Fee": [
+                        "scale_normal"
+                    ],
+                    "Application Type": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Last week Pay": [
+                        "scale_normal"
+                    ],
+                    "Total Collection Amount": [
+                        "scale_normal"
+                    ],
+                    "Total Current Balance": [
+                        "scale_normal"
+                    ],
+                    "Total Revolving Credit Limit": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "8d9ca63a-3bba-4cf7-8b22-0f44db7933a6",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1236,
+                "dense_1_size": 64,
+                "dense_2_size": 16,
+                "learning_rate": 0.01,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Loan Amount": [
+                    "scale_normal"
+                ],
+                "Funded Amount": [
+                    "scale_normal"
+                ],
+                "Funded Amount Investor": [
+                    "scale_normal"
+                ],
+                "Term": [
+                    "scale_normal"
+                ],
+                "Batch Enrolled": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Interest Rate": [
+                    "scale_normal"
+                ],
+                "Grade": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Sub Grade": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Employment Duration": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Home Ownership": [
+                    "scale_normal"
+                ],
+                "Verification Status": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Debit to Income": [
+                    "scale_normal"
+                ],
+                "Open Account": [
+                    "scale_normal"
+                ],
+                "Revolving Balance": [
+                    "scale_normal"
+                ],
+                "Revolving Utilities": [
+                    "scale_normal"
+                ],
+                "Total Accounts": [
+                    "scale_normal"
+                ],
+                "Initial List Status": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Total Received Interest": [
+                    "scale_normal"
+                ],
+                "Total Received Late Fee": [
+                    "scale_normal"
+                ],
+                "Recoveries": [
+                    "scale_normal"
+                ],
+                "Collection Recovery Fee": [
+                    "scale_normal"
+                ],
+                "Application Type": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Last week Pay": [
+                    "scale_normal"
+                ],
+                "Total Collection Amount": [
+                    "scale_normal"
+                ],
+                "Total Current Balance": [
+                    "scale_normal"
+                ],
+                "Total Revolving Credit Limit": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_results_2\\X.data",
+            "y_path": "AutoML_results_2\\y.data",
+            "results_path": "AutoML_results_2"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1236,
+            "dense_1_size": 64,
+            "dense_2_size": 16,
+            "learning_rate": 0.01,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "13_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "13_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "13_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.31448790570079244,
+    "train_time": 40.05287170410156,
+    "is_stacked": false,
+    "threshold": 0.13598749237909316
+}

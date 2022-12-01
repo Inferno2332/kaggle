@@ -1,0 +1,1840 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "not_so_random",
+            "golden_features",
+            "insert_random_feature",
+            "features_selection",
+            "hill_climbing_1",
+            "hill_climbing_2",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 1.1007370948791504
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 1.5211286544799805
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 15.069063901901245
+            },
+            {
+                "model_name": "3_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 17.484934329986572
+            },
+            {
+                "model_name": "4_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 16.37341332435608
+            },
+            {
+                "model_name": "5_Default_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 12.656575441360474
+            },
+            {
+                "model_name": "6_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 19.836703300476074
+            },
+            {
+                "model_name": "7_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 52.920843839645386
+            },
+            {
+                "model_name": "8_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "not_so_random",
+                "train_time": 13.472225427627563
+            },
+            {
+                "model_name": "10_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "not_so_random",
+                "train_time": 28.14365315437317
+            },
+            {
+                "model_name": "12_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "not_so_random",
+                "train_time": 33.05491900444031
+            },
+            {
+                "model_name": "9_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "not_so_random",
+                "train_time": 25.14565110206604
+            },
+            {
+                "model_name": "11_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "not_so_random",
+                "train_time": 60.37522506713867
+            },
+            {
+                "model_name": "13_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "not_so_random",
+                "train_time": 40.05287170410156
+            },
+            {
+                "model_name": "11_RandomForest_GoldenFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "golden_features",
+                "train_time": 47.209927558898926
+            },
+            {
+                "model_name": "10_RandomForest_GoldenFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "golden_features",
+                "train_time": 36.58749747276306
+            },
+            {
+                "model_name": "7_Default_RandomForest_GoldenFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "golden_features",
+                "train_time": 40.82278919219971
+            },
+            {
+                "model_name": "11_RandomForest_RandomFeature",
+                "model_type": "Random Forest",
+                "fit_level": "insert_random_feature",
+                "train_time": 54.319286823272705
+            },
+            {
+                "model_name": "11_RandomForest_SelectedFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "features_selection",
+                "train_time": 40.379666805267334
+            },
+            {
+                "model_name": "6_Default_NeuralNetwork_SelectedFeatures",
+                "model_type": "Neural Network",
+                "fit_level": "features_selection",
+                "train_time": 31.28901743888855
+            },
+            {
+                "model_name": "5_Default_Xgboost_SelectedFeatures",
+                "model_type": "Xgboost",
+                "fit_level": "features_selection",
+                "train_time": 17.84887719154358
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 9.162238836288452
+            }
+        ],
+        "is_hill_climbing": true,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": 0.30826985470646956,
+                "train_time": 2.257798433303833,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.3085301272289802,
+                "train_time": 17.10870099067688,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "criterion": "gini",
+                    "max_depth": 4,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "3_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.31425363161096975,
+                "train_time": 18.63323450088501,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1237,
+                    "criterion": "gini",
+                    "max_depth": 4,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.31425363161096975,
+                "train_time": 17.55193257331848,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 5,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_Xgboost",
+                "status": "trained",
+                "final_loss": 0.3090612779623349,
+                "train_time": 14.796595096588135,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Loan Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount Investor": [
+                            "scale_normal"
+                        ],
+                        "Term": [
+                            "scale_normal"
+                        ],
+                        "Batch Enrolled": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Interest Rate": [
+                            "scale_normal"
+                        ],
+                        "Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Home Ownership": [
+                            "scale_normal"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Debit to Income": [
+                            "scale_normal"
+                        ],
+                        "Open Account": [
+                            "scale_normal"
+                        ],
+                        "Revolving Balance": [
+                            "scale_normal"
+                        ],
+                        "Revolving Utilities": [
+                            "scale_normal"
+                        ],
+                        "Total Accounts": [
+                            "scale_normal"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Total Received Interest": [
+                            "scale_normal"
+                        ],
+                        "Total Received Late Fee": [
+                            "scale_normal"
+                        ],
+                        "Recoveries": [
+                            "scale_normal"
+                        ],
+                        "Collection Recovery Fee": [
+                            "scale_normal"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Last week Pay": [
+                            "scale_normal"
+                        ],
+                        "Total Collection Amount": [
+                            "scale_normal"
+                        ],
+                        "Total Current Balance": [
+                            "scale_normal"
+                        ],
+                        "Total Revolving Credit Limit": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 6,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 0.30896096499843195,
+                "train_time": 20.800570487976074,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 7,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "7_Default_RandomForest",
+                "status": "trained",
+                "final_loss": 0.3078720226018037,
+                "train_time": 54.516716957092285,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "not_so_random": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 8,
+                    "min_child_weight": 5,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "8_Xgboost",
+                "status": "trained",
+                "final_loss": 0.3093605080097525,
+                "train_time": 14.931761503219604,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_features": 0.5,
+                    "min_samples_split": 20,
+                    "max_depth": 4,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "10_RandomForest",
+                "status": "trained",
+                "final_loss": 0.3078655306995466,
+                "train_time": 32.52544713020325,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Loan Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount Investor": [
+                            "scale_normal"
+                        ],
+                        "Term": [
+                            "scale_normal"
+                        ],
+                        "Batch Enrolled": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Interest Rate": [
+                            "scale_normal"
+                        ],
+                        "Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Home Ownership": [
+                            "scale_normal"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Debit to Income": [
+                            "scale_normal"
+                        ],
+                        "Open Account": [
+                            "scale_normal"
+                        ],
+                        "Revolving Balance": [
+                            "scale_normal"
+                        ],
+                        "Revolving Utilities": [
+                            "scale_normal"
+                        ],
+                        "Total Accounts": [
+                            "scale_normal"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Total Received Interest": [
+                            "scale_normal"
+                        ],
+                        "Total Received Late Fee": [
+                            "scale_normal"
+                        ],
+                        "Recoveries": [
+                            "scale_normal"
+                        ],
+                        "Collection Recovery Fee": [
+                            "scale_normal"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Last week Pay": [
+                            "scale_normal"
+                        ],
+                        "Total Collection Amount": [
+                            "scale_normal"
+                        ],
+                        "Total Current Balance": [
+                            "scale_normal"
+                        ],
+                        "Total Revolving Credit Limit": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "dense_1_size": 32,
+                    "dense_2_size": 4,
+                    "learning_rate": 0.05,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "12_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 0.31813635646931765,
+                "train_time": 35.39874768257141,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary:logistic",
+                    "eta": 0.1,
+                    "max_depth": 8,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "9_Xgboost",
+                "status": "trained",
+                "final_loss": 0.3095723141981365,
+                "train_time": 28.870112895965576,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "criterion": "gini",
+                    "max_features": 0.7,
+                    "min_samples_split": 30,
+                    "max_depth": 7,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "11_RandomForest",
+                "status": "trained",
+                "final_loss": 0.30786533984962977,
+                "train_time": 63.353759765625,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Loan Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount Investor": [
+                            "scale_normal"
+                        ],
+                        "Term": [
+                            "scale_normal"
+                        ],
+                        "Batch Enrolled": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Interest Rate": [
+                            "scale_normal"
+                        ],
+                        "Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Home Ownership": [
+                            "scale_normal"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Debit to Income": [
+                            "scale_normal"
+                        ],
+                        "Open Account": [
+                            "scale_normal"
+                        ],
+                        "Revolving Balance": [
+                            "scale_normal"
+                        ],
+                        "Revolving Utilities": [
+                            "scale_normal"
+                        ],
+                        "Total Accounts": [
+                            "scale_normal"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Total Received Interest": [
+                            "scale_normal"
+                        ],
+                        "Total Received Late Fee": [
+                            "scale_normal"
+                        ],
+                        "Recoveries": [
+                            "scale_normal"
+                        ],
+                        "Collection Recovery Fee": [
+                            "scale_normal"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Last week Pay": [
+                            "scale_normal"
+                        ],
+                        "Total Collection Amount": [
+                            "scale_normal"
+                        ],
+                        "Total Current Balance": [
+                            "scale_normal"
+                        ],
+                        "Total Revolving Credit Limit": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "dense_1_size": 64,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.01,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "13_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 0.31448790570079244,
+                "train_time": 42.35419297218323,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "golden_features": [
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "AutoML_results_2",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "criterion": "gini",
+                    "max_features": 0.7,
+                    "min_samples_split": 30,
+                    "max_depth": 7,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "11_RandomForest_GoldenFeatures",
+                "status": "trained",
+                "final_loss": 0.3080804336310915,
+                "train_time": 50.12240767478943,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "AutoML_results_2",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_features": 0.5,
+                    "min_samples_split": 20,
+                    "max_depth": 4,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "10_RandomForest_GoldenFeatures",
+                "status": "trained",
+                "final_loss": 0.3079164007775612,
+                "train_time": 38.64928722381592,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "AutoML_results_2",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 7,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "7_Default_RandomForest_GoldenFeatures",
+                "status": "trained",
+                "final_loss": 0.3079099266134896,
+                "train_time": 43.90017580986023,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "insert_random_feature": [
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "add_random_feature": true
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "criterion": "gini",
+                    "max_features": 0.7,
+                    "min_samples_split": 30,
+                    "max_depth": 7,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "11_RandomForest_RandomFeature",
+                "status": "trained",
+                "final_loss": 0.3079763566720138,
+                "train_time": 56.52389359474182,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "features_selection": [
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "drop_features": [
+                        "random_feature",
+                        "Employment Duration",
+                        "Sub Grade",
+                        "Application Type",
+                        "Initial List Status",
+                        "Collection 12 months Medical",
+                        "Open Account",
+                        "Batch Enrolled",
+                        "Verification Status",
+                        "Funded Amount Investor",
+                        "Public Record",
+                        "Recoveries",
+                        "Revolving Utilities",
+                        "Total Received Interest",
+                        "Grade",
+                        "Revolving Balance",
+                        "Total Current Balance",
+                        "Funded Amount"
+                    ]
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "criterion": "gini",
+                    "max_features": 0.7,
+                    "min_samples_split": 30,
+                    "max_depth": 7,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "11_RandomForest_SelectedFeatures",
+                "status": "trained",
+                "final_loss": 0.30796329426860547,
+                "train_time": 42.960105895996094,
+                "data_type": "original_features_selection",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Loan Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount": [
+                            "scale_normal"
+                        ],
+                        "Funded Amount Investor": [
+                            "scale_normal"
+                        ],
+                        "Term": [
+                            "scale_normal"
+                        ],
+                        "Batch Enrolled": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Interest Rate": [
+                            "scale_normal"
+                        ],
+                        "Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Home Ownership": [
+                            "scale_normal"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Debit to Income": [
+                            "scale_normal"
+                        ],
+                        "Open Account": [
+                            "scale_normal"
+                        ],
+                        "Revolving Balance": [
+                            "scale_normal"
+                        ],
+                        "Revolving Utilities": [
+                            "scale_normal"
+                        ],
+                        "Total Accounts": [
+                            "scale_normal"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Total Received Interest": [
+                            "scale_normal"
+                        ],
+                        "Total Received Late Fee": [
+                            "scale_normal"
+                        ],
+                        "Recoveries": [
+                            "scale_normal"
+                        ],
+                        "Collection Recovery Fee": [
+                            "scale_normal"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Last week Pay": [
+                            "scale_normal"
+                        ],
+                        "Total Collection Amount": [
+                            "scale_normal"
+                        ],
+                        "Total Current Balance": [
+                            "scale_normal"
+                        ],
+                        "Total Revolving Credit Limit": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "drop_features": [
+                        "random_feature",
+                        "Employment Duration",
+                        "Sub Grade",
+                        "Application Type",
+                        "Initial List Status",
+                        "Collection 12 months Medical",
+                        "Open Account",
+                        "Batch Enrolled",
+                        "Verification Status",
+                        "Funded Amount Investor",
+                        "Public Record",
+                        "Recoveries",
+                        "Revolving Utilities",
+                        "Total Received Interest",
+                        "Grade",
+                        "Revolving Balance",
+                        "Total Current Balance",
+                        "Funded Amount"
+                    ]
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 6,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_NeuralNetwork_SelectedFeatures",
+                "status": "trained",
+                "final_loss": 0.31265425783237827,
+                "train_time": 33.34885096549988,
+                "data_type": "original_features_selection",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Batch Enrolled": [
+                            "categorical_to_int"
+                        ],
+                        "Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Sub Grade": [
+                            "categorical_to_int"
+                        ],
+                        "Employment Duration": [
+                            "categorical_to_int"
+                        ],
+                        "Verification Status": [
+                            "categorical_to_int"
+                        ],
+                        "Initial List Status": [
+                            "categorical_to_int"
+                        ],
+                        "Application Type": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "drop_features": [
+                        "random_feature",
+                        "Employment Duration",
+                        "Sub Grade",
+                        "Application Type",
+                        "Initial List Status",
+                        "Collection 12 months Medical",
+                        "Open Account",
+                        "Batch Enrolled",
+                        "Verification Status",
+                        "Funded Amount Investor",
+                        "Public Record",
+                        "Recoveries",
+                        "Revolving Utilities",
+                        "Total Received Interest",
+                        "Grade",
+                        "Revolving Balance",
+                        "Total Current Balance",
+                        "Funded Amount"
+                    ]
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_results_2\\X.data",
+                    "y_path": "AutoML_results_2\\y.data",
+                    "results_path": "AutoML_results_2"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 5,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_Xgboost_SelectedFeatures",
+                "status": "trained",
+                "final_loss": 0.30907441973955685,
+                "train_time": 20.233661890029907,
+                "data_type": "original_features_selection",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.3076931817322785,
+                "train_time": 9.162238836288452
+            }
+        ]
+    },
+    "adjust_validation": false
+}

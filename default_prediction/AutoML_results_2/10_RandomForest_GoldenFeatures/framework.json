@@ -1,0 +1,348 @@
+{
+    "uid": "6d8009b8-ec87-469f-827e-ad29134c29c0",
+    "name": "10_RandomForest_GoldenFeatures",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Batch Enrolled": {
+                            "BAT1104812": 0,
+                            "BAT1135695": 1,
+                            "BAT1184694": 2,
+                            "BAT1467036": 3,
+                            "BAT1586599": 4,
+                            "BAT1761981": 5,
+                            "BAT1766061": 6,
+                            "BAT1780517": 7,
+                            "BAT1930365": 8,
+                            "BAT2003848": 9,
+                            "BAT2078974": 10,
+                            "BAT2136391": 11,
+                            "BAT224923": 12,
+                            "BAT2252229": 13,
+                            "BAT2333412": 14,
+                            "BAT2428731": 15,
+                            "BAT2522922": 16,
+                            "BAT2558388": 17,
+                            "BAT2575549": 18,
+                            "BAT2803411": 19,
+                            "BAT2833642": 20,
+                            "BAT3193689": 21,
+                            "BAT3461431": 22,
+                            "BAT3726927": 23,
+                            "BAT3865626": 24,
+                            "BAT3873588": 25,
+                            "BAT4136152": 26,
+                            "BAT4271519": 27,
+                            "BAT4351734": 28,
+                            "BAT4694572": 29,
+                            "BAT4722912": 30,
+                            "BAT4808022": 31,
+                            "BAT5341619": 32,
+                            "BAT5489674": 33,
+                            "BAT5525466": 34,
+                            "BAT5547201": 35,
+                            "BAT5629144": 36,
+                            "BAT5714674": 37,
+                            "BAT5811547": 38,
+                            "BAT5849876": 39,
+                            "BAT5924421": 40
+                        },
+                        "Grade": {
+                            "A": 0,
+                            "B": 1,
+                            "C": 2,
+                            "D": 3,
+                            "E": 4,
+                            "F": 5,
+                            "G": 6
+                        },
+                        "Sub Grade": {
+                            "A1": 0,
+                            "A2": 1,
+                            "A3": 2,
+                            "A4": 3,
+                            "A5": 4,
+                            "B1": 5,
+                            "B2": 6,
+                            "B3": 7,
+                            "B4": 8,
+                            "B5": 9,
+                            "C1": 10,
+                            "C2": 11,
+                            "C3": 12,
+                            "C4": 13,
+                            "C5": 14,
+                            "D1": 15,
+                            "D2": 16,
+                            "D3": 17,
+                            "D4": 18,
+                            "D5": 19,
+                            "E1": 20,
+                            "E2": 21,
+                            "E3": 22,
+                            "E4": 23,
+                            "E5": 24,
+                            "F1": 25,
+                            "F2": 26,
+                            "F3": 27,
+                            "F4": 28,
+                            "F5": 29,
+                            "G1": 30,
+                            "G2": 31,
+                            "G3": 32,
+                            "G4": 33,
+                            "G5": 34
+                        },
+                        "Employment Duration": {
+                            "MORTGAGE": 0,
+                            "OWN": 1,
+                            "RENT": 2
+                        },
+                        "Verification Status": {
+                            "Not Verified": 0,
+                            "Source Verified": 1,
+                            "Verified": 2
+                        },
+                        "Initial List Status": {
+                            "f": 0,
+                            "w": 1
+                        },
+                        "Application Type": {
+                            "INDIVIDUAL": 0,
+                            "JOINT": 1
+                        }
+                    },
+                    "columns": [
+                        "Batch Enrolled",
+                        "Grade",
+                        "Sub Grade",
+                        "Employment Duration",
+                        "Verification Status",
+                        "Initial List Status",
+                        "Application Type"
+                    ]
+                }
+            ],
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Public Record",
+                        "feature2": "Term",
+                        "operation": "sum",
+                        "score": 0.3085007435
+                    },
+                    {
+                        "feature1": "Collection 12 months Medical",
+                        "feature2": "Term",
+                        "operation": "sum",
+                        "score": 0.3089274476
+                    },
+                    {
+                        "feature1": "Term",
+                        "feature2": "Public Record",
+                        "operation": "ratio",
+                        "score": 0.3089326424
+                    },
+                    {
+                        "feature1": "Collection Recovery Fee",
+                        "feature2": "Total Received Late Fee",
+                        "operation": "sum",
+                        "score": 0.3090765635
+                    },
+                    {
+                        "feature1": "Interest Rate",
+                        "feature2": "Term",
+                        "operation": "multiply",
+                        "score": 0.309619819
+                    },
+                    {
+                        "feature1": "Recoveries",
+                        "feature2": "Total Current Balance",
+                        "operation": "ratio",
+                        "score": 0.3097431858
+                    },
+                    {
+                        "feature1": "Total Received Interest",
+                        "feature2": "Loan Amount",
+                        "operation": "sum",
+                        "score": 0.3103920159
+                    },
+                    {
+                        "feature1": "Total Accounts",
+                        "feature2": "Open Account",
+                        "operation": "ratio",
+                        "score": 0.3103975036
+                    },
+                    {
+                        "feature1": "Open Account",
+                        "feature2": "Total Accounts",
+                        "operation": "ratio",
+                        "score": 0.3103975036
+                    },
+                    {
+                        "feature1": "Home Ownership",
+                        "feature2": "Collection Recovery Fee",
+                        "operation": "ratio",
+                        "score": 0.3106787836
+                    }
+                ],
+                "new_columns": [
+                    "Public Record_sum_Term",
+                    "Collection 12 months Medical_sum_Term",
+                    "Term_ratio_Public Record",
+                    "Collection Recovery Fee_sum_Total Received Late Fee",
+                    "Interest Rate_multiply_Term",
+                    "Recoveries_ratio_Total Current Balance",
+                    "Total Received Interest_sum_Loan Amount",
+                    "Total Accounts_ratio_Open Account",
+                    "Open Account_ratio_Total Accounts",
+                    "Home Ownership_ratio_Collection Recovery Fee"
+                ],
+                "ml_task": "binary_classification"
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Batch Enrolled": [
+                        "categorical_to_int"
+                    ],
+                    "Grade": [
+                        "categorical_to_int"
+                    ],
+                    "Sub Grade": [
+                        "categorical_to_int"
+                    ],
+                    "Employment Duration": [
+                        "categorical_to_int"
+                    ],
+                    "Verification Status": [
+                        "categorical_to_int"
+                    ],
+                    "Initial List Status": [
+                        "categorical_to_int"
+                    ],
+                    "Application Type": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "golden_features": {
+                    "results_path": "AutoML_results_2",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1
+                }
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Random Forest",
+            "algorithm_short_name": "Random Forest",
+            "uid": "b4964787-5224-493b-99f3-9df603c06ed3",
+            "params": {
+                "model_type": "Random Forest",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "gini",
+                "max_features": 0.5,
+                "min_samples_split": 20,
+                "max_depth": 4,
+                "eval_metric_name": "logloss",
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 100,
+            "train_cant_improve_limit": 1,
+            "min_steps": 1,
+            "max_steps": 50,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Batch Enrolled": [
+                    "categorical_to_int"
+                ],
+                "Grade": [
+                    "categorical_to_int"
+                ],
+                "Sub Grade": [
+                    "categorical_to_int"
+                ],
+                "Employment Duration": [
+                    "categorical_to_int"
+                ],
+                "Verification Status": [
+                    "categorical_to_int"
+                ],
+                "Initial List Status": [
+                    "categorical_to_int"
+                ],
+                "Application Type": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification",
+            "golden_features": {
+                "results_path": "AutoML_results_2",
+                "ml_task": "binary_classification",
+                "n_jobs": -1
+            }
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_results_2\\X.data",
+            "y_path": "AutoML_results_2\\y.data",
+            "results_path": "AutoML_results_2"
+        },
+        "learner": {
+            "model_type": "Random Forest",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "gini",
+            "max_features": 0.5,
+            "min_samples_split": 20,
+            "max_depth": 4,
+            "eval_metric_name": "logloss",
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "10_RandomForest_GoldenFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_golden_features",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "10_RandomForest_GoldenFeatures\\learner_fold_0.random_forest"
+    ],
+    "predictions_fname": "10_RandomForest_GoldenFeatures\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.3079164007775612,
+    "train_time": 36.58749747276306,
+    "is_stacked": false,
+    "threshold": 0.10668912479059461
+}

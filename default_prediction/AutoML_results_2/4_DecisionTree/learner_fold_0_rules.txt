@@ -1,0 +1,32 @@
+if (Total Collection Amount > 31.5) and (Term > 58.5) and (Funded Amount Investor > 8121.695) and (Total Collection Amount <= 12860.5) then class: 0 (proba: 89.89%) | based on 16,703 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit <= 23351.5) and (Collection Recovery Fee > 0.0) and (Total Current Balance <= 366237.5) then class: 0 (proba: 92.42%) | based on 11,510 samples
+
+if (Total Collection Amount > 31.5) and (Term <= 58.5) and (Interest Rate > 5.37) and (Total Received Late Fee <= 26.289) then class: 0 (proba: 91.34%) | based on 10,726 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit > 23351.5) and (Interest Rate <= 21.058) and (Total Received Interest <= 12270.688) then class: 0 (proba: 91.03%) | based on 7,845 samples
+
+if (Total Collection Amount > 31.5) and (Term > 58.5) and (Funded Amount Investor <= 8121.695) and (Funded Amount Investor <= 8117.483) then class: 0 (proba: 87.71%) | based on 2,392 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit <= 23351.5) and (Collection Recovery Fee > 0.0) and (Total Current Balance > 366237.5) then class: 0 (proba: 89.08%) | based on 989 samples
+
+if (Total Collection Amount > 31.5) and (Term <= 58.5) and (Interest Rate > 5.37) and (Total Received Late Fee > 26.289) then class: 0 (proba: 84.32%) | based on 185 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit > 23351.5) and (Interest Rate > 21.058) and (Total Received Late Fee <= 19.775) then class: 0 (proba: 84.52%) | based on 155 samples
+
+if (Total Collection Amount > 31.5) and (Term > 58.5) and (Funded Amount Investor > 8121.695) and (Total Collection Amount > 12860.5) then class: 0 (proba: 72.73%) | based on 33 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit > 23351.5) and (Interest Rate <= 21.058) and (Total Received Interest > 12270.688) then class: 0 (proba: 69.57%) | based on 23 samples
+
+if (Total Collection Amount > 31.5) and (Term <= 58.5) and (Interest Rate <= 5.37) and (Total Collection Amount <= 155.0) then class: 0 (proba: 80.95%) | based on 21 samples
+
+if (Total Collection Amount > 31.5) and (Term > 58.5) and (Funded Amount Investor <= 8121.695) and (Funded Amount Investor > 8117.483) then class: 1 (proba: 60.0%) | based on 5 samples
+
+if (Total Collection Amount > 31.5) and (Term <= 58.5) and (Interest Rate <= 5.37) and (Total Collection Amount > 155.0) then class: 1 (proba: 100.0%) | based on 4 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit > 23351.5) and (Interest Rate > 21.058) and (Total Received Late Fee > 19.775) then class: 1 (proba: 100.0%) | based on 3 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit <= 23351.5) and (Collection Recovery Fee <= 0.0) and (Open Account <= 23.0) then class: 1 (proba: 100.0%) | based on 2 samples
+
+if (Total Collection Amount <= 31.5) and (Total Revolving Credit Limit <= 23351.5) and (Collection Recovery Fee <= 0.0) and (Open Account > 23.0) then class: 0 (proba: 100.0%) | based on 1 samples
+

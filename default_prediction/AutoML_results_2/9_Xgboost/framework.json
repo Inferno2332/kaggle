@@ -1,0 +1,263 @@
+{
+    "uid": "c58b7571-682b-4f4a-87f3-5a13d0b87f2e",
+    "name": "9_Xgboost",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Batch Enrolled": {
+                            "BAT1104812": 0,
+                            "BAT1135695": 1,
+                            "BAT1184694": 2,
+                            "BAT1467036": 3,
+                            "BAT1586599": 4,
+                            "BAT1761981": 5,
+                            "BAT1766061": 6,
+                            "BAT1780517": 7,
+                            "BAT1930365": 8,
+                            "BAT2003848": 9,
+                            "BAT2078974": 10,
+                            "BAT2136391": 11,
+                            "BAT224923": 12,
+                            "BAT2252229": 13,
+                            "BAT2333412": 14,
+                            "BAT2428731": 15,
+                            "BAT2522922": 16,
+                            "BAT2558388": 17,
+                            "BAT2575549": 18,
+                            "BAT2803411": 19,
+                            "BAT2833642": 20,
+                            "BAT3193689": 21,
+                            "BAT3461431": 22,
+                            "BAT3726927": 23,
+                            "BAT3865626": 24,
+                            "BAT3873588": 25,
+                            "BAT4136152": 26,
+                            "BAT4271519": 27,
+                            "BAT4351734": 28,
+                            "BAT4694572": 29,
+                            "BAT4722912": 30,
+                            "BAT4808022": 31,
+                            "BAT5341619": 32,
+                            "BAT5489674": 33,
+                            "BAT5525466": 34,
+                            "BAT5547201": 35,
+                            "BAT5629144": 36,
+                            "BAT5714674": 37,
+                            "BAT5811547": 38,
+                            "BAT5849876": 39,
+                            "BAT5924421": 40
+                        },
+                        "Grade": {
+                            "A": 0,
+                            "B": 1,
+                            "C": 2,
+                            "D": 3,
+                            "E": 4,
+                            "F": 5,
+                            "G": 6
+                        },
+                        "Sub Grade": {
+                            "A1": 0,
+                            "A2": 1,
+                            "A3": 2,
+                            "A4": 3,
+                            "A5": 4,
+                            "B1": 5,
+                            "B2": 6,
+                            "B3": 7,
+                            "B4": 8,
+                            "B5": 9,
+                            "C1": 10,
+                            "C2": 11,
+                            "C3": 12,
+                            "C4": 13,
+                            "C5": 14,
+                            "D1": 15,
+                            "D2": 16,
+                            "D3": 17,
+                            "D4": 18,
+                            "D5": 19,
+                            "E1": 20,
+                            "E2": 21,
+                            "E3": 22,
+                            "E4": 23,
+                            "E5": 24,
+                            "F1": 25,
+                            "F2": 26,
+                            "F3": 27,
+                            "F4": 28,
+                            "F5": 29,
+                            "G1": 30,
+                            "G2": 31,
+                            "G3": 32,
+                            "G4": 33,
+                            "G5": 34
+                        },
+                        "Employment Duration": {
+                            "MORTGAGE": 0,
+                            "OWN": 1,
+                            "RENT": 2
+                        },
+                        "Verification Status": {
+                            "Not Verified": 0,
+                            "Source Verified": 1,
+                            "Verified": 2
+                        },
+                        "Initial List Status": {
+                            "f": 0,
+                            "w": 1
+                        },
+                        "Application Type": {
+                            "INDIVIDUAL": 0,
+                            "JOINT": 1
+                        }
+                    },
+                    "columns": [
+                        "Batch Enrolled",
+                        "Grade",
+                        "Sub Grade",
+                        "Employment Duration",
+                        "Verification Status",
+                        "Initial List Status",
+                        "Application Type"
+                    ]
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Batch Enrolled": [
+                        "categorical_to_int"
+                    ],
+                    "Grade": [
+                        "categorical_to_int"
+                    ],
+                    "Sub Grade": [
+                        "categorical_to_int"
+                    ],
+                    "Employment Duration": [
+                        "categorical_to_int"
+                    ],
+                    "Verification Status": [
+                        "categorical_to_int"
+                    ],
+                    "Initial List Status": [
+                        "categorical_to_int"
+                    ],
+                    "Application Type": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.6.2",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "8f808964-4874-4f39-8722-d64ee7f065bf",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1236,
+                "objective": "binary:logistic",
+                "eta": 0.1,
+                "max_depth": 8,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "eval_metric": "logloss",
+                "explain_level": 2
+            },
+            "name": "learner_fold_0",
+            "best_ntree_limit": 39
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Batch Enrolled": [
+                    "categorical_to_int"
+                ],
+                "Grade": [
+                    "categorical_to_int"
+                ],
+                "Sub Grade": [
+                    "categorical_to_int"
+                ],
+                "Employment Duration": [
+                    "categorical_to_int"
+                ],
+                "Verification Status": [
+                    "categorical_to_int"
+                ],
+                "Initial List Status": [
+                    "categorical_to_int"
+                ],
+                "Application Type": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_results_2\\X.data",
+            "y_path": "AutoML_results_2\\y.data",
+            "results_path": "AutoML_results_2"
+        },
+        "learner": {
+            "model_type": "Xgboost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1236,
+            "objective": "binary:logistic",
+            "eta": 0.1,
+            "max_depth": 8,
+            "min_child_weight": 1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "eval_metric": "logloss",
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "9_Xgboost",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "9_Xgboost\\learner_fold_0.xgboost"
+    ],
+    "predictions_fname": "9_Xgboost\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.3095723141981365,
+    "train_time": 25.14565110206604,
+    "is_stacked": false,
+    "threshold": 0.158298522233963
+}

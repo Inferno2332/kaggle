@@ -1,0 +1,128 @@
+{
+    "columns": [
+        "Loan Amount",
+        "Funded Amount",
+        "Funded Amount Investor",
+        "Term",
+        "Batch Enrolled",
+        "Interest Rate",
+        "Grade",
+        "Sub Grade",
+        "Employment Duration",
+        "Home Ownership",
+        "Verification Status",
+        "Debit to Income",
+        "Open Account",
+        "Public Record",
+        "Revolving Balance",
+        "Revolving Utilities",
+        "Total Accounts",
+        "Initial List Status",
+        "Total Received Interest",
+        "Total Received Late Fee",
+        "Recoveries",
+        "Collection Recovery Fee",
+        "Collection 12 months Medical",
+        "Application Type",
+        "Last week Pay",
+        "Total Collection Amount",
+        "Total Current Balance",
+        "Total Revolving Credit Limit"
+    ],
+    "rows": 67463,
+    "cols": 28,
+    "target_is_numeric": true,
+    "columns_info": {
+        "Loan Amount": [
+            "scale"
+        ],
+        "Funded Amount": [
+            "scale"
+        ],
+        "Funded Amount Investor": [
+            "scale"
+        ],
+        "Term": [
+            "scale"
+        ],
+        "Batch Enrolled": [
+            "categorical",
+            "many_categories"
+        ],
+        "Interest Rate": [
+            "scale"
+        ],
+        "Grade": [
+            "categorical",
+            "few_categories"
+        ],
+        "Sub Grade": [
+            "categorical",
+            "many_categories"
+        ],
+        "Employment Duration": [
+            "categorical",
+            "few_categories"
+        ],
+        "Home Ownership": [
+            "scale"
+        ],
+        "Verification Status": [
+            "categorical",
+            "few_categories"
+        ],
+        "Debit to Income": [
+            "scale"
+        ],
+        "Open Account": [
+            "scale"
+        ],
+        "Public Record": [],
+        "Revolving Balance": [
+            "scale"
+        ],
+        "Revolving Utilities": [
+            "scale"
+        ],
+        "Total Accounts": [
+            "scale"
+        ],
+        "Initial List Status": [
+            "categorical",
+            "few_categories"
+        ],
+        "Total Received Interest": [
+            "scale"
+        ],
+        "Total Received Late Fee": [
+            "scale"
+        ],
+        "Recoveries": [
+            "scale"
+        ],
+        "Collection Recovery Fee": [
+            "scale"
+        ],
+        "Collection 12 months Medical": [],
+        "Application Type": [
+            "categorical",
+            "few_categories"
+        ],
+        "Last week Pay": [
+            "scale"
+        ],
+        "Total Collection Amount": [
+            "scale"
+        ],
+        "Total Current Balance": [
+            "scale"
+        ],
+        "Total Revolving Credit Limit": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 28,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

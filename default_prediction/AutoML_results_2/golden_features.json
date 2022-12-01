@@ -1,0 +1,77 @@
+{
+    "new_features": [
+        {
+            "feature1": "Public Record",
+            "feature2": "Term",
+            "operation": "sum",
+            "score": 0.3085007435
+        },
+        {
+            "feature1": "Collection 12 months Medical",
+            "feature2": "Term",
+            "operation": "sum",
+            "score": 0.3089274476
+        },
+        {
+            "feature1": "Term",
+            "feature2": "Public Record",
+            "operation": "ratio",
+            "score": 0.3089326424
+        },
+        {
+            "feature1": "Collection Recovery Fee",
+            "feature2": "Total Received Late Fee",
+            "operation": "sum",
+            "score": 0.3090765635
+        },
+        {
+            "feature1": "Interest Rate",
+            "feature2": "Term",
+            "operation": "multiply",
+            "score": 0.309619819
+        },
+        {
+            "feature1": "Recoveries",
+            "feature2": "Total Current Balance",
+            "operation": "ratio",
+            "score": 0.3097431858
+        },
+        {
+            "feature1": "Total Received Interest",
+            "feature2": "Loan Amount",
+            "operation": "sum",
+            "score": 0.3103920159
+        },
+        {
+            "feature1": "Total Accounts",
+            "feature2": "Open Account",
+            "operation": "ratio",
+            "score": 0.3103975036
+        },
+        {
+            "feature1": "Open Account",
+            "feature2": "Total Accounts",
+            "operation": "ratio",
+            "score": 0.3103975036
+        },
+        {
+            "feature1": "Home Ownership",
+            "feature2": "Collection Recovery Fee",
+            "operation": "ratio",
+            "score": 0.3106787836
+        }
+    ],
+    "new_columns": [
+        "Public Record_sum_Term",
+        "Collection 12 months Medical_sum_Term",
+        "Term_ratio_Public Record",
+        "Collection Recovery Fee_sum_Total Received Late Fee",
+        "Interest Rate_multiply_Term",
+        "Recoveries_ratio_Total Current Balance",
+        "Total Received Interest_sum_Loan Amount",
+        "Total Accounts_ratio_Open Account",
+        "Open Account_ratio_Total Accounts",
+        "Home Ownership_ratio_Collection Recovery Fee"
+    ],
+    "ml_task": "binary_classification"
+}
